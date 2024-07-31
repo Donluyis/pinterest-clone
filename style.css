@@ -1,52 +1,162 @@
 *{
-    font-family: "Noto Sans", sans-serif;
+    padding: 0;
+    margin: 0;
 }
-header{
-    background-color: #171717;
+body{
+    background-color: rgb(255, 249, 249);
+    font-family: sans-serif;
+    font-weight: bold;
 }
-header span{
-    color: #EDEDED;
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 98vw;
+    height: 80px;
+    font-size: 16px;
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(255, 249, 249);
 }
-.nav-item a{
-    color: #EDEDED; 
+#pinterest-icon{
+    width: 35px;
+    height: 35px;
+    padding: 4px;
 }
-.nav-item a{
-    color: #EDEDED;
+#pinterest-icon:hover{
+    background-color: #e9e9e9;
+    border-radius: 150px;
 }
-/* Link visitado*/
-.nav-item a:visited{
-    color: #EDEDED;
+.first-list{
+    display: flex;
 }
-.nav-item a:hover{
-    color: #EDEDED;
+.first-list li{
+    list-style: none;
+    padding: 0px 12px;
 }
-#nav-button{
-    background-color: #DA0037;
+.first-list a{
+    text-decoration: none;
+    color: black;
 }
-.icon-square .bi{
-    width: 1.5cm;
-    height: auto;
-    border-radius: 5px;
-    font-size: 1cm;
+#start{
+    background-color: black;
+    color: white;
+    padding: 14px 12px;
+    border-radius: 25px;
 }
-.icon-habilidades{
-    color: #DA0037;
-    font-size: 2cm;
+/* Barra de búsqueda */
+.search{
+    flex-grow: 1;
+    height: 48px;
+    background-color: #e9e9e9;
+    border-radius: 30px;
 }
-.img-proyecto1{
-    background-image: url('/assets/Clone\ pinterest.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.search:hover{
+    background-color: #e1e1e1;
 }
-footer{
-    background-color: #EDEDED;
+
+.search:focus-within{
+    border: 4px solid #7fc1ff; 
 }
-footer .icon-footer{
-color:#DA0037;
+barra{
+    display: flex;
+    align-items: center;
+    height: 48px;
 }
-footer p{
-    color: #DA0037;
+
+#lupa{
+    padding: 13px;
+    color: #767676;
+    font-size: 20px;
+    font-weight: bolder;
 }
-footer p a{
-    color: #DA0037;
+.barra input{
+    border: none;
+    background-color: inherit;
+    outline: none;
+    padding: 0px 8px 0px 0px;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+/* iconos derecha */
+.right-items span{
+    padding: 8px;
+    color: #767676;
+    font-size: 28px;
+}
+.right-items span:hover{
+    background-color: #e9e9e9;
+    border-radius: 150px;
+    cursor: pointer;
+}
+/* Estilos main*/
+.content{
+    position: absolute;
+    margin-top: 80px;
+}
+.images{
+    columns: 5 240px;
+    margin: auto;
+}
+.card-image{
+    position: relative;
+    padding: 6px;
+}
+.card-image img{
+    border-radius: 15px;
+    min-width: 240px;
+    max-width: 240px;
+}
+.card-image:hover > :first-child{
+    filter: brightness(60%);
+}
+
+.card-image:hover > * {
+    visibility: visible;
+    display: inline;
+}
+.button{
+    position: absolute;
+    left: 65%;
+    top: 5%;
+    padding: 13px 15px;
+    background-color: #e60023;
+    border-radius: 30px;
+    visibility: hidden;
+}
+.card-image button a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.oculto1{
+    position: absolute;
+    left: 60%;
+    bottom: 8%;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
+
+}
+.oculto2{
+    position: absolute;
+    left: 78%;
+    bottom: 8%;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
 }
